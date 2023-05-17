@@ -17,18 +17,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleTextView"
-        android:layout_above="@id/readMoreButton"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp">
 
         <TextView
             android:id="@+id/contentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:scrollbars="vertical"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ante nisl. Fusce a mauris eleifend, ullamcorper odio ac, euismod justo. Donec ultricies purus at aliquam dignissim. Maecenas at nisi sollicitudin, scelerisque mi in, semper enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed in tristique tortor. Donec accumsan dictum tortor at auctor. Sed et dui iaculis, gravida odio sed, varius lorem."
-            android:scrollbars="vertical" />
+            android:textSize="16sp" />
 
     </ScrollView>
 
@@ -42,5 +41,16 @@
         android:layout_marginBottom="15dp"
         android:onClick="startLec"
         android:text="Start" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="75dp"
+        android:onClick="backToLec"
+        android:text="Zpět" />
 
 </RelativeLayout>

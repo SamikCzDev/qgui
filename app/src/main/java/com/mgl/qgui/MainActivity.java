@@ -122,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void backToLec(View view) {
+        setContentView(R.layout.activity_lectures);
+    }
 
 
     public void backToMenu(View view) {

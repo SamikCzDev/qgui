@@ -1,6 +1,5 @@
 package com.mgl.qgui.managers;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -27,13 +26,12 @@ public class TestManager {
 
     private int pocOtazekNow = 0;
     private int testId;
-    private Context context;
 
     private int currQID;
 
     private boolean status = false;
 
-    private boolean training = false;
+    private boolean training;
 
     public TestManager(MainActivity mainActivity, JSONObject currentTest, boolean training) throws JSONException {
         this.mainActivity = mainActivity;
@@ -121,6 +119,11 @@ public class TestManager {
 
         } else {
             RadioGroup selectedRadioButton = mainActivity.findViewById(R.id.answer_options);
+            int selectedId = selectedRadioButton.getCheckedRadioButtonId();
+            if(selectedId == -1) {
+                return;
+            }
+
             String selectedAnswer = ((RadioButton)mainActivity.findViewById(selectedRadioButton.getCheckedRadioButtonId())).getText().toString();
             SendToCheckTask sendToCheckTask = new SendToCheckTask(mainActivity);
             sendToCheckTask.execute(String.valueOf(currQID),String.valueOf(testId),selectedAnswer,String.valueOf(training),mainActivity.getCookies());
