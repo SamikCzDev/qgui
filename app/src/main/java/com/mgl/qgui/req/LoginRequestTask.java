@@ -3,6 +3,7 @@ package com.mgl.qgui.req;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.ViewDebug;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mgl.qgui.MainActivity;
@@ -26,6 +27,8 @@ public class LoginRequestTask extends AsyncTask<String, Void, String> {
     }
 
     private static final String TAG = "LoginRequestTask";
+
+    private String resp;
 
     @Override
     protected String doInBackground(String... params) {
@@ -60,6 +63,8 @@ public class LoginRequestTask extends AsyncTask<String, Void, String> {
 
                 String cookies = connection.getHeaderField("Set-Cookie");
 
+                resp = response.toString();
+
                 return cookies;
             } else {
                 Log.e(TAG, "Neúspěšný požadavek, chybový kód: " + responseCode);
@@ -88,6 +93,11 @@ public class LoginRequestTask extends AsyncTask<String, Void, String> {
             Log.d(TAG, "Cookies: " + cookies);
             mainActivity.setCookies(cookies);
             mainActivity.setContentView(R.layout.activity_menu);
+            try {
+                ((TextView)mainActivity.findViewById(R.id.text_level)).setText("Tvůj level: " + new JSONObject(resp.toString()).get("response"));
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
 
         } else {
             mainActivity.runOnUiThread(new Runnable() {
