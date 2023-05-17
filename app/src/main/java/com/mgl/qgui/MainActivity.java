@@ -121,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
         level = 7;
     }
 
+    public void onBackToMenu(View view) {
+        setContentView(R.layout.activity_menu);
+    }
+
 
     public void backToLec(View view) {
         setContentView(R.layout.activity_lectures);

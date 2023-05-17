@@ -3,17 +3,16 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".MenuActivity"
     android:gravity="center">
 
     <ImageView
         android:id="@+id/image_logo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="32dp"
         android:contentDescription="Quiz App Logo"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="32dp" />
+        android:scaleType="centerInside"
+        tools:srcCompat="@drawable/logo_round" />
 
     <Button
         android:id="@+id/button_start_quiz"
@@ -23,6 +22,7 @@
         android:onClick="onGenTest"
         android:text="@string/testStarttxt"
         android:textColor="@color/white"
+        android:background="@drawable/values"
         android:textSize="18sp" />
 
     <Button
@@ -33,6 +33,7 @@
         android:onClick="onLecturesBtn"
         android:text="Témata"
         android:textColor="@color/white"
+        android:background="@drawable/values"
         android:textSize="18sp" />
 
 

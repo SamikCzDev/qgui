@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_password"
         android:onClick="onLoginBtn"
+        android:background="@drawable/values"
         android:text="@string/loginTxt" />
 
 </RelativeLayout>

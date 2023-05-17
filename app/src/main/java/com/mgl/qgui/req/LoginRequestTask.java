@@ -88,6 +88,7 @@ public class LoginRequestTask extends AsyncTask<String, Void, String> {
             Log.d(TAG, "Cookies: " + cookies);
             mainActivity.setCookies(cookies);
             mainActivity.setContentView(R.layout.activity_menu);
+
         } else {
             mainActivity.runOnUiThread(new Runnable() {
                 public void run() {
