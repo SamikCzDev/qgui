@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">qgui</string>
+    <string name="usernameHint">Uživatelské jméno</string>
+    <string name="passwordHint">Heslo</string>
+    <string name="loginTxt">Přihlásit se</string>
+    <string name="testStarttxt">Vygenerovat test</string>
+    <string name="settingstxt">Nastavení</string>
+</resources>

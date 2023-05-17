@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Title"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_above="@id/readMoreButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ante nisl. Fusce a mauris eleifend, ullamcorper odio ac, euismod justo. Donec ultricies purus at aliquam dignissim. Maecenas at nisi sollicitudin, scelerisque mi in, semper enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed in tristique tortor. Donec accumsan dictum tortor at auctor. Sed et dui iaculis, gravida odio sed, varius lorem."
+            android:scrollbars="vertical" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/readMoreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="startLec"
+        android:text="Start" />
+
+</RelativeLayout>

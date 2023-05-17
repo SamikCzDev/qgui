@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onL1"
+        android:text="Seznámení s IT" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onL2"
+        android:text="IT Zkratky" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onL3"
+        android:text="Nebezpečí na int." />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:onClick="onL4"
+        android:layout_height="wrap_content"
+        android:text="Síťe" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onL5"
+        android:text="Programování" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:onClick="onL6"
+        android:layout_height="wrap_content"
+        android:text="Otázky na RAID" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onL7"
+        android:text="Seznámení s RAID" />
+
+</LinearLayout>
